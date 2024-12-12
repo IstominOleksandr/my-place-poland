@@ -7,6 +7,7 @@ body {
     line-height: 1.5;
     letter-spacing: 0.02em;
 }
+
 h1,
 h2,
 h3,
@@ -15,21 +16,25 @@ h5,
 p {
     margin: 0;
 }
+
 a {
     text-decoration: none;
     color: #242421;
 }
+
 nav {
     font-weight: 500;
     color: #2E2F42;
     display: flex;
     align-items: center;
-}   
+}
+
 ul {
     list-style-type: none;
     margin: 0;
     padding-left: 0;
 }
+
 /* ------------------------------------------ */
 .header {
     border-bottom: 1px solid #e7e9fc;
@@ -94,10 +99,12 @@ nav ul li:last-child {
     padding: 24px 0;
     position: relative;
 }
+
 .nav {
     color: #434455;
     transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
+
 .nav:hover,
 .nav:focus {
     color: #404BBF;
@@ -130,6 +137,8 @@ nav ul li:last-child {
 .nav-address:focus {
     color: #404BBF;
 }
+
+/* Стиль секции с фоном */
 .section-first {
     height: 600px;
     padding: 188px 0;
@@ -155,6 +164,8 @@ nav ul li:last-child {
     -webkit-background-clip: text;
     color: transparent;
 }
+
+/* Секция с текстом */
 .section {
     display: flex;
     flex-direction: column;
@@ -163,22 +174,26 @@ nav ul li:last-child {
     max-width: 800px;
     text-align: center;
 }
+
 .section-title {
     margin-bottom: 20px;
     font-size: 24px;
     color: #333;
 }
+
 .text-container {
     display: flex;
     flex-direction: column;
     gap: 15px;
 }
+
 .text-paragraph {
     line-height: 1.6;
     font-size: 16px;
     color: #555;
     margin: 0;
 }
+
 .text-list {
     text-align: left;
     margin: 20px 0;
@@ -191,6 +206,7 @@ nav ul li:last-child {
     font-size: 16px;
     color: #444;
 }
+
 #gallery {
     text-align: center;
     margin: 50px auto;
@@ -221,6 +237,8 @@ nav ul li:last-child {
     border: 1px solid #ccc;
     border-radius: 8px;
 }
+
+/* Футер */
 .footer {
     text-align: center;
     padding: 20px;
@@ -232,4 +250,80 @@ nav ul li:last-child {
 
 .footer-text {
     margin: 0;
+}
+
+/* Адаптивная верстка */
+@media (max-width: 1024px) {
+    .container {
+        width: 100%;
+        padding: 0 10px;
+    }
+
+    .navigation {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .header-list {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .address {
+        flex-direction: column;
+    }
+
+    .gallery-container {
+        flex-direction: column;
+    }
+
+    .gallery-column {
+        margin-bottom: 20px;
+    }
+}
+
+@media (max-width: 768px) {
+    .section-first {
+        padding: 150px 0;
+    }
+
+    .text-h1 {
+        font-size: 36px;
+        margin-bottom: 24px;
+    }
+
+    .section-title {
+        font-size: 20px;
+    }
+
+    .text-paragraph {
+        font-size: 14px;
+    }
+
+    .gallery-image {
+        max-width: 100%;
+    }
+
+    .gallery-column h3 {
+        font-size: 18px;
+    }
+}
+
+@media (max-width: 480px) {
+    .text-h1 {
+        font-size: 28px;
+    }
+
+    .text-paragraph {
+        font-size: 12px;
+    }
+
+    .gallery-image {
+        height: 180px;
+    }
+
+    .footer {
+        font-size: 12px;
+        padding: 10px;
+    }
 }
